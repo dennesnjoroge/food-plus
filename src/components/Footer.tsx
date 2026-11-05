@@ -1,16 +1,26 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import { MapPin, Phone, Mail, Clock, CopyrightIcon } from "lucide-react";
 
 export const Footer = () => {
   const [emailAddress, setEmailAddress] = useState("");
+  const [isLoading, setISLoading] = useState(false);
 
-  const handleSubmit = (e: { preventDefault: () => void }) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    console.log(emailAddress);
+
+    try {
+      setISLoading(true);
+
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+
+      window.alert("Email added successfully.");
+    } finally {
+      setEmailAddress("");
+      setISLoading(false);
+    }
   };
   return (
-    <footer className="border-t border-t-gray-300 bg-secondary">
+    <footer className="border-t border-t-border/20 bg-secondary">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
         <div className="mx-auto flex max-w-xl flex-col items-center">
           <h2 className="mb-4 text-center text-xl text-muted-light sm:text-2xl">
@@ -34,9 +44,10 @@ export const Footer = () => {
               />
               <button
                 type="submit"
+                disabled={isLoading}
                 className="w-auto max-w-28 cursor-pointer bg-primary px-4 py-2.5 text-secondary transition-colors hover:bg-primary-hover"
               >
-                Subscribe
+                {isLoading ? "Loading..." : "Subscribe"}
               </button>
             </form>
           </div>
@@ -60,38 +71,42 @@ export const Footer = () => {
                 Hot meals, lightning-fast ordering — just a tap away.
               </p>
 
-              <div className="mt-6 space-y-4 text-muted-light">
-                <div className="flex gap-2 text-muted-light">
-                  <div className="flex items-center gap-1">
-                    <MapPin className="h-4 w-4" strokeWidth={1.5} />
-                    <span className="">Address:</span>
-                  </div>
-                  <span className="font-normal">Nairobi, Kenya</span>
-                </div>
+              <div className="flex mt-6 gap-2">
+                <a
+                  href="#"
+                  className="transition-opacity opacity-80 hover:opacity-100"
+                >
+                  <img
+                    alt="Instagram"
+                    loading="lazy"
+                    data-src="https://cdn-static.oraimo.com/img/icon-instagram-white.svg"
+                    src="https://cdn-static.oraimo.com/img/icon-instagram-white.svg"
+                  />
+                </a>
 
-                <div className="flex gap-2">
-                  <div className="flex items-center gap-1">
-                    <Phone className="h-4 w-4" strokeWidth={1.5} />
-                    <span className="">Contact:</span>
-                  </div>
-                  <span className="font-normal">0712345678</span>
-                </div>
+                <a
+                  href="#"
+                  className="transition-opacity opacity-80 hover:opacity-100"
+                >
+                  <img
+                    alt="Facebook"
+                    loading="lazy"
+                    data-src="https://cdn-static.oraimo.com/img/icon-facebook-white.svg"
+                    src="https://cdn-static.oraimo.com/img/icon-facebook-white.svg"
+                  />
+                </a>
 
-                <div className="flex gap-2">
-                  <div className="flex items-center gap-1">
-                    <Mail className="h-4 w-4" strokeWidth={1.5} />
-                    <span className="">Email:</span>
-                  </div>
-                  <span className="font-normal">hello@example.com</span>
-                </div>
-
-                <div className="flex gap-2">
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" strokeWidth={1.5} />
-                    <span className="">Hours:</span>
-                  </div>
-                  <span className="font-normal">Always open</span>
-                </div>
+                <a
+                  href="#"
+                  className="transition-opacity opacity-80 hover:opacity-100"
+                >
+                  <img
+                    alt="Tiktok"
+                    loading="lazy"
+                    data-src="https://cdn-static.oraimo.com/img/icon-tiktok-white.svg"
+                    src="https://cdn-static.oraimo.com/img/icon-tiktok-white.svg"
+                  />
+                </a>
               </div>
             </div>
           </div>
@@ -115,7 +130,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h2 className="font-bold text-muted-light">Account</h2>
+            <h2 className="font-bold text-muted-light">Quick Links</h2>
             <div className="mt-4 flex flex-col gap-2 text-gray-600">
               <Link
                 to="/login"
@@ -163,32 +178,34 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h2 className="font-bold text-muted-light">Socials</h2>
-            <div className="mt-4 flex flex-col gap-2">
-              <Link
-                to="#"
-                className="text-muted-light hover:text-white transition-colors"
+            <h2 className="font-bold text-muted-light">Get Our App</h2>
+
+            <div className="mt-6 flex flex-row flex-wrap items-center gap-3 sm:flex-col sm:items-start">
+              <a
+                href="#"
+                aria-label="Get it on Google Play"
+                className="transition-opacity opacity-80 hover:opacity-100"
               >
-                Facebook
-              </Link>
-              <Link
-                to="#"
-                className="text-muted-light hover:text-white transition-colors"
+                <img
+                  src="https://cdn-static.oraimo.com/img/google-play-white.svg"
+                  alt="Get it on Google Play"
+                  loading="lazy"
+                  className="h-10 w-auto"
+                />
+              </a>
+
+              <a
+                href="#"
+                aria-label="Download on the App Store"
+                className="transition-opacity opacity-80 hover:opacity-100"
               >
-                X (Twitter)
-              </Link>
-              <Link
-                to="#"
-                className="text-muted-light hover:text-white transition-colors"
-              >
-                Instagram
-              </Link>
-              <Link
-                to="#"
-                className="text-muted-light hover:text-white transition-colors"
-              >
-                YouTube
-              </Link>
+                <img
+                  src="https://cdn-static.oraimo.com/img/app-store-white.svg"
+                  alt="Download on the App Store"
+                  loading="lazy"
+                  className="h-10 w-auto"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -198,24 +215,9 @@ export const Footer = () => {
 
       <div className="mx-auto max-w-7xl px-4 py-3 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-2 text-sm text-muted-light sm:flex-row sm:justify-between">
-          <div className="flex items-center gap-1">
-            <CopyrightIcon className="h-4 w-4" strokeWidth={1.5} />
-            <span>
-              {new Date().getFullYear()} FoodPlus. All rights reserved.
-            </span>
-          </div>
-
-          <div className="flex items-center justify-center gap-1">
-            Developed by:{" "}
-            <a
-              href="https://dennesnjoroge.co.ke"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white font-bold"
-            >
-              Dennes Njoroge
-            </a>
-          </div>
+          <span>
+            &copy; {new Date().getFullYear()} FoodPlus. All rights reserved.
+          </span>
         </div>
       </div>
     </footer>
