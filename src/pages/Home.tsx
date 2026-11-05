@@ -1,13 +1,21 @@
-import Header from "../components/Header";
 import { Hero } from "../components/Hero";
-import { Footer } from "../components/Footer";
+import { Featured } from "../components/Featured";
+import { Promotion } from "../components/Promotion";
+import { OurMenu } from "../components/OurMenu";
+import { WhyChooseUs } from "../components/WhyChooseUs";
+import { HowItWorks } from "../components/HowItWorks";
+import { CTA } from "../components/CTA";
 
 const Home = () => {
   return (
     <>
-      <Header />
       <Hero />
-      <Footer />
+      <Featured />
+      <Promotion />
+      <OurMenu />
+      <WhyChooseUs />
+      <HowItWorks />
+      <CTA />
     </>
   );
 };
