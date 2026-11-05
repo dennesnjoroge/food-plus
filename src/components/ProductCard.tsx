@@ -18,7 +18,7 @@ export const ProductCard = ({
 }: ProductCardProps) => {
   return (
     <article className="group overflow-hidden rounded-2xl border border-gray-100 bg-white transition hover:border-gray-200">
-      <Link to={`/menu/${slug}`} className="group block">
+      <Link to={`/products/${slug}`} className="group block">
         <div className="relative aspect-square overflow-hidden bg-gray-50">
           <img
             src={image}
