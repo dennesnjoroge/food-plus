@@ -1,12 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./pages/Home";
+import { Menu } from "./components/Menu";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/menu" element={<h1>Our Menu</h1>} />
+        <Route path="/menu" element={<Menu />} />
         <Route path="/services" element={<h1>Services</h1>} />
         <Route path="/about" element={<h1>About Us</h1>} />
         <Route path="/contact" element={<h1>Contact</h1>} />
