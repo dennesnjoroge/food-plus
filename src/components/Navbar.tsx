@@ -2,9 +2,9 @@ import { NavLink } from "react-router";
 
 const navigation = [
   { name: "Home", path: "/" },
-  { name: "Our Menu", path: "/menu" },
-  { name: "Services", path: "/services" },
   { name: "About Us", path: "/about" },
+  { name: "Products", path: "/products" },
+  { name: "Track Order", path: "/track-order" },
   { name: "Contact Us", path: "/contact" },
 ];
 
