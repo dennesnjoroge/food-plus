@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router";
+import { LoaderCircle } from "lucide-react";
 
 export const Footer = () => {
   const [emailAddress, setEmailAddress] = useState("");
@@ -45,9 +46,15 @@ export const Footer = () => {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="w-auto max-w-28 cursor-pointer bg-primary px-4 py-2.5 text-secondary transition-colors hover:bg-primary-hover"
+                className="w-auto max-w-32 cursor-pointer bg-primary px-4 py-2.5 text-secondary transition-colors hover:bg-primary-hover"
               >
-                {isLoading ? "Loading..." : "Subscribe"}
+                {isLoading ? (
+                  <span className="flex gap-2 items-center">
+                    <LoaderCircle className="animate-spin h-4 w-4" /> Loading...
+                  </span>
+                ) : (
+                  "Subscribe"
+                )}
               </button>
             </form>
           </div>
