@@ -131,7 +131,7 @@ export const TrackOrder = () => {
       <div className="mx-auto max-w-4xl px-5 py-14 sm:px-8 sm:py-16">
         <section className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm sm:p-8">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+            <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-secondary/10 text-secondary">
               <Package className="h-5 w-5" />
             </div>
 
@@ -199,8 +199,8 @@ export const TrackOrder = () => {
                   </h2>
                 </div>
 
-                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-xs font-bold text-primary">
-                  <span className="h-2 w-2 rounded-full bg-primary" />
+                <span className="inline-flex w-fit items-center gap-2 rounded-full bg-secondary/10 px-4 py-2 text-xs font-bold text-secondary">
+                  <span className="h-2 w-2 rounded-full bg-secondary" />
                   {order.status.replaceAll("_", " ")}
                 </span>
               </div>

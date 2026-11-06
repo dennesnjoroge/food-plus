@@ -46,7 +46,7 @@ export const ProductCard = ({
       </Link>
 
       <div className="p-4">
-        <button className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 py-3 font-bold text-secondary transition hover:bg-primary-hover">
+        <button className="mt-4 flex w-full items-center justify-center gap-2 rounded-xl bg-secondary px-4 py-3 font-semibold text-muted-light transition hover:opacity-90">
           <ShoppingCart className="h-4 w-4" />
           Add to cart
         </button>
