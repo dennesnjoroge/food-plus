@@ -80,7 +80,21 @@ export const Footer = () => {
 
               <div className="flex mt-6 gap-2">
                 <a
-                  href="#"
+                  href="https://x.com"
+                  target="_blank"
+                  className="transition-opacity opacity-80 hover:opacity-100"
+                >
+                  <img
+                    alt=""
+                    data-src="https://cdn-static.oraimo.com/img/icon-twitter-white.svg"
+                    loading="lazy"
+                    src="https://cdn-static.oraimo.com/img/icon-twitter-white.svg"
+                  ></img>
+                </a>
+
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
                   className="transition-opacity opacity-80 hover:opacity-100"
                 >
                   <img
@@ -92,7 +106,8 @@ export const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://facebook.com"
+                  target="_blank"
                   className="transition-opacity opacity-80 hover:opacity-100"
                 >
                   <img
@@ -104,7 +119,8 @@ export const Footer = () => {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://tiktok.com"
+                  target="_blank"
                   className="transition-opacity opacity-80 hover:opacity-100"
                 >
                   <img
