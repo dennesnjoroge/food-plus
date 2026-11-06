@@ -167,12 +167,6 @@ export const Footer = () => {
               >
                 Cart
               </Link>
-              <Link
-                to="/"
-                className="text-muted-light hover:text-white transition-colors"
-              >
-                Favourites
-              </Link>
             </div>
           </div>
 
@@ -180,22 +174,16 @@ export const Footer = () => {
             <h2 className="font-bold text-muted-light">Orders</h2>
             <div className="mt-4 flex flex-col gap-2">
               <Link
-                to="/menu"
+                to="/products"
                 className="text-muted-light hover:text-white transition-colors"
               >
-                Our Menu
+                Shop
               </Link>
               <Link
-                to="#"
+                to="/track-order"
                 className="text-muted-light hover:text-white transition-colors"
               >
                 Track Order
-              </Link>
-              <Link
-                to="#"
-                className="text-muted-light hover:text-white transition-colors"
-              >
-                Deals
               </Link>
             </div>
           </div>
