@@ -104,7 +104,7 @@ export const About = () => {
           </div>
 
           <div className="pt-5 lg:pt-0">
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+            <p className="text-sm font-semibold uppercase tracking-wider text-secondary">
               Our Story
             </p>
 
@@ -131,7 +131,7 @@ export const About = () => {
 
             <Link
               to="/contact"
-              className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-primary transition hover:text-primary-hover"
+              className="mt-7 inline-flex items-center gap-2 text-sm font-bold text-secondary transition hover:opacity-90"
             >
               Get in Touch
               <ArrowRight className="h-4 w-4" />
@@ -156,7 +156,7 @@ export const About = () => {
           </div>
 
           <div className="rounded-2xl border border-gray-100 bg-white shadow-xl p-7 sm:p-10">
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary">
               <ArrowRight className="h-6 w-6" />
             </div>
 
@@ -176,7 +176,7 @@ export const About = () => {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+            <p className="text-sm font-semibold uppercase tracking-wider text-secondary">
               What Matters to Us
             </p>
 
@@ -220,7 +220,7 @@ export const About = () => {
       <section className="bg-gray-50">
         <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20 lg:py-24">
           <div className="mx-auto max-w-2xl text-center">
-            <p className="text-sm font-semibold uppercase tracking-wider text-primary">
+            <p className="text-sm font-semibold uppercase tracking-wider text-secondary">
               The Experience
             </p>
 

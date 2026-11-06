@@ -4,7 +4,6 @@ export const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-secondary">
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-16 sm:px-8 lg:grid-cols-2 lg:gap-16 lg:py-24">
-        {/* Left: Content */}
         <div className="max-w-xl">
           <h1 className="mt-7 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
             Fast food,
@@ -18,21 +17,20 @@ export const Hero = () => {
 
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
-              href="/order"
+              href="/products"
               className="inline-flex items-center justify-center rounded-xl bg-primary px-7 py-4 text-sm font-semibold text-secondary shadow-lg shadow-orange-500/20 transition hover:-translate-y-0.5 hover:bg-primary-hover"
             >
               Order Now
             </a>
 
             <a
-              href="/menu"
+              href="#menu"
               className="inline-flex items-center justify-center rounded-xl border border-primary px-7 py-4 text-sm font-semibold text-primary transition hover:border-primary-hover hover:text-primary-hover"
             >
               Our Menu
             </a>
           </div>
 
-          {/* Trust indicators */}
           <div className="mt-12 flex flex-wrap gap-8 border-t border-border/20 pt-7">
             <div className="flex flex-col gap-1">
               <div className="flex items-center gap-2">
@@ -65,7 +63,6 @@ export const Hero = () => {
           </div>
         </div>
 
-        {/* Right: Rider image */}
         <div className="relative mx-auto w-full max-w-xl">
           <img
             src="/images/delivery-rider.svg"

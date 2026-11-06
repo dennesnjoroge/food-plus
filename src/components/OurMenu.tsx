@@ -14,7 +14,7 @@ export const OurMenu = () => {
       : products.filter((product) => product.category === activeCategory);
 
   return (
-    <section className="bg-white">
+    <section id="menu" className="bg-white">
       <div className="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16 lg:py-20">
         {/* Heading */}
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
